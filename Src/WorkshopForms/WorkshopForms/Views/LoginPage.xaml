@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:WorkshopForms.ViewModels"
+    x:Class="WorkshopForms.Views.LoginPage"
+    Title="Inicio">
+
+    <!-- El BindingContext se encarga de proveer datos a los elementos-->
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel/>
+    </ContentPage.BindingContext>
+
+    <!-- Las páginas solo pueden contener un elemento hijo
+         normalmente será un contenedor como el StackLayout o el Grid-->
+    <StackLayout Margin="20" >
+        <!--Los Databinding definen la propiedad del ViewModel de la
+        que se obtendrán los datos para la propiedad del control-->
+        <Entry Placeholder="Usuario" Text="{Binding Name}" />
+        <Entry Placeholder="Contraseña" IsPassword="true" Text="{Binding Password}"/>
+        <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+        <!-- Los comandos permiten ejecutar acciones-->
+        <Button Text="Iniciar Sesión" Command="{Binding LoginCommand}"/>
+    </StackLayout>
+
+</ContentPage>

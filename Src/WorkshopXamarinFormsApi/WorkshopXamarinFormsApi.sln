@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkshopXamarinFormsApi", "WorkshopXamarinFormsApi\WorkshopXamarinFormsApi.csproj", "{730535B0-9C07-4584-B236-1D6F3BE34A80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{730535B0-9C07-4584-B236-1D6F3BE34A80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{730535B0-9C07-4584-B236-1D6F3BE34A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{730535B0-9C07-4584-B236-1D6F3BE34A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{730535B0-9C07-4584-B236-1D6F3BE34A80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D2ECCD9-D609-4B2C-B3D9-EEFDCE1186FE}
+	EndGlobalSection
+EndGlobal

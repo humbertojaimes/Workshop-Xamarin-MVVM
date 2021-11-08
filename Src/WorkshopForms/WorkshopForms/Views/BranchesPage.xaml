@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WorkshopForms.Views.BranchesPage"
+    xmlns:vm="clr-namespace:WorkshopForms.ViewModels"
+    Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:BranchesViewModel/>
+    </ContentPage.BindingContext>
+
+    <!-- RefreshView permite extender la funcionalidad del CollectionView
+         Para generar un efecto similar al de Facebook, con el cual
+         podemos actualizar con el gesto de arrastrar hacia abajo la página-->
+    <RefreshView Command="{Binding RefreshCommand}" IsRefreshing="{Binding IsRefreshing}">
+        <!-- CollectionView es el mejor elemento para mostrar colecciones
+             tiene beneficios en el rendimiento sobre el ListView-->
+        <CollectionView ItemsSource="{Binding Branches}">
+            <CollectionView.ItemTemplate>
+                <!-- DataTemplate define como se mostrarán los elementos de la lista -->
+                <DataTemplate>
+                    <StackLayout Margin="0,5">
+                        <!-- El BindingContext de los elementos dentro de DataTemplate
+                     es el elemento de la lista, no el ViewModel-->
+                        <Label Text="{Binding Name}" TextColor="Brown" FontSize="20"/>
+                        <Label Text="{Binding Location}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
+
+</ContentPage>
